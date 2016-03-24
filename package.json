@@ -1,0 +1,23 @@
+{
+  "name": "webpack-polyfill-service-plugin",
+  "version": "0.0.1",
+  "description": "Adds polyfills to bundle file via polyfill-service",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisjbrown/webpack-polyfill-service-plugin"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Christopher Brown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisjbrown/webpack-polyfill-service-plugin/issues"
+  },
+  "homepage": "https://github.com/chrisjbrown/webpack-polyfill-service-plugin",
+  "dependencies": {
+    "polyfill-service": "^3.3.0",
+    "webpack-core": "^0.6.6"
+  }
+}
