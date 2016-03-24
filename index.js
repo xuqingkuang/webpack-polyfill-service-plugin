@@ -12,13 +12,12 @@ function PolyfillsPlugin(options) {
 }
 
 PolyfillsPlugin.prototype.apply = function(compiler) {
-	var self = this;
-	compiler.plugin("compilation", function(compilation) {
-		compilation.plugin("optimize-chunk-assets", function(chunks, callback) {
-			chunks.forEach(function(chunk) {
-				if (!chunk.initial) return;
-				chunk.files.forEach(function(file, i) {
-					PolyfillService.getPolyfillString(self.options).then(function(bundleString) {
+	PolyfillService.getPolyfillString(this.options).then(function(bundleString) {
+		compiler.plugin("compilation", function(compilation) {
+			compilation.plugin("optimize-chunk-assets", function(chunks, callback) {
+				chunks.forEach(function(chunk) {
+					if (!chunk.initial) return;
+					chunk.files.forEach(function(file, i) {
 						compilation.assets[file] = new ConcatSource("/* Polyfills */\n", bundleString, compilation.assets[file]);
 						callback();
 					});
