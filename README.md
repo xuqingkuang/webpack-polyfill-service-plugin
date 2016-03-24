@@ -1,3 +1,4 @@
+[![npm version](https://badge.fury.io/js/webpack-polyfill-service-plugin.svg)](https://badge.fury.io/js/webpack-polyfill-service-plugin)
 
 # webpack-polyfill-service-plugin
 
@@ -27,11 +28,11 @@ module.exports = {
 			uaString: 'Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)',
 			minify: false,
 			features: {
-				'Array/prototype/forEach': {},
-				'Array/prototype/includes': {},
-				'Object/assign': {},
-				'Promise': {},
-				'String/prototype/includes': {}
+        'Array/prototype/forEach': {flags: ['always', 'gated']},
+        'Array/prototype/includes': {flags: ['always', 'gated']},
+        'Object/assign': {flags: ['always', 'gated']},
+        'Promise': {flags: ['always', 'gated']},
+        'String/prototype/includes': {flags: ['always', 'gated']}
 			}
 		}),
 	]
