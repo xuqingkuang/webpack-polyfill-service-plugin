@@ -5,9 +5,10 @@ var fs = require("fs");
 function PolyfillsPlugin(options) {
 	this.options = options || {};
 	this.options = {
-		uaString: options.uaString || 'Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)',
+		uaString: options.uaString || '',
 		minify: options.minify || false,
-		features: options.features || {}
+		features: options.features || {},
+		unknown: options.unknown || 'polyfill'
 	};
 }
 
