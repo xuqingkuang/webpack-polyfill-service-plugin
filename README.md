@@ -27,7 +27,6 @@ module.exports = {
 
 	plugins: [
 		new PolyfillsPlugin({
-			uaString: 'Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)',
 			minify: false,
 			features: {
 				'Array/prototype/forEach': {flags: ['always', 'gated']},
