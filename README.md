@@ -29,11 +29,11 @@ module.exports = {
 		new PolyfillsPlugin({
 			minify: false,
 			features: {
-				'Array/prototype/forEach': {flags: ['always', 'gated']},
-				'Array/prototype/includes': {flags: ['always', 'gated']},
-				'Object/assign': {flags: ['always', 'gated']},
+				'Array.prototype.forEach': {flags: ['always', 'gated']},
+				'Array.prototype.includes': {flags: ['always', 'gated']},
+				'Object.assign': {flags: ['always', 'gated']},
 				'Promise': {flags: ['always', 'gated']},
-				'String/prototype/includes': {flags: ['always', 'gated']}
+				'String.prototype.includes': {flags: ['always', 'gated']}
 			}
 		}),
 	]
