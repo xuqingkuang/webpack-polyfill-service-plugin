@@ -1,5 +1,7 @@
 
 [![npm version](https://badge.fury.io/js/webpack-polyfill-service-plugin.svg)](https://badge.fury.io/js/webpack-polyfill-service-plugin)
+[![Dependency Status](https://gemnasium.com/chrisjbrown/webpack-polyfill-service-plugin.svg)](https://gemnasium.com/chrisjbrown/webpack-polyfill-service-plugin)
+
 
 # webpack-polyfill-service-plugin
 
