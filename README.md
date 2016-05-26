@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/chrisjbrown/webpack-polyfill-service-plugin.png?label=ready&title=Ready)](https://waffle.io/chrisjbrown/webpack-polyfill-service-plugin)
 
 [![npm version](https://badge.fury.io/js/webpack-polyfill-service-plugin.svg)](https://badge.fury.io/js/webpack-polyfill-service-plugin)
 [![Dependency Status](https://gemnasium.com/chrisjbrown/webpack-polyfill-service-plugin.svg)](https://gemnasium.com/chrisjbrown/webpack-polyfill-service-plugin)
