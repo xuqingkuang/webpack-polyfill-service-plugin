@@ -17,7 +17,9 @@ PolyfillsPlugin.prototype.apply = function(compiler) {
 	compiler.plugin("compilation", function(compilation) {
 		compilation.plugin("optimize-chunk-assets", function(chunks, callback) {
 			chunks.forEach(function(chunk) {
-				if (!chunk.initial) return;
+				// Webpack 2 new isInitial is not compatible with version 1
+				var chunkIsInitial = chunk.isInitial && chunk.isInitial() || chunk.initial;
+				if (!chunkIsInitial) return;
 				PolyfillService.getPolyfillString(self.options).then(function(bundleString) {
 					chunk.files.forEach(function(file, i) {
 						compilation.assets[file] = new ConcatSource("/* Polyfills */\n", bundleString, compilation.assets[file]);
