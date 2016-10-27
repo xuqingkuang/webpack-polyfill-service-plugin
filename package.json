@@ -1,6 +1,6 @@
 {
   "name": "webpack-polyfill-service-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Adds polyfills to bundle file via polyfill-service",
   "main": "index.js",
   "repository": {
