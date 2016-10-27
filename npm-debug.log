@@ -1,0 +1,108 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.10.7
+3 info using node@v6.2.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/deBijenkorf/Sites/webpack-polyfill-service-plugin',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/deBijenkorf/.npm/webpack-polyfill-service-plugin/0.0.3/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/deBijenkorf/.npm correctMkdir not in flight; initializing
+10 info lifecycle webpack-polyfill-service-plugin@0.0.3~prepublish: webpack-polyfill-service-plugin@0.0.3
+11 silly lifecycle webpack-polyfill-service-plugin@0.0.3~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/deBijenkorf/.npm/webpack-polyfill-service-plugin/0.0.3/package.tgz',
+12 verbose tar pack   '/Users/deBijenkorf/Sites/webpack-polyfill-service-plugin' ]
+13 verbose tarball /Users/deBijenkorf/.npm/webpack-polyfill-service-plugin/0.0.3/package.tgz
+14 verbose folder /Users/deBijenkorf/Sites/webpack-polyfill-service-plugin
+15 verbose addLocalTarball adding from inside cache /Users/deBijenkorf/.npm/webpack-polyfill-service-plugin/0.0.3/package.tgz
+16 verbose correctMkdir /Users/deBijenkorf/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd webpack-polyfill-service-plugin@0.0.3
+18 verbose afterAdd /Users/deBijenkorf/.npm/webpack-polyfill-service-plugin/0.0.3/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/deBijenkorf/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/deBijenkorf/.npm/webpack-polyfill-service-plugin/0.0.3/package/package.json written
+21 silly publish { name: 'webpack-polyfill-service-plugin',
+21 silly publish   version: '0.0.3',
+21 silly publish   description: 'Adds polyfills to bundle file via polyfill-service',
+21 silly publish   main: 'index.js',
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/chrisjbrown/webpack-polyfill-service-plugin.git' },
+21 silly publish   keywords: [ 'webpack' ],
+21 silly publish   author: { name: 'Christopher Brown' },
+21 silly publish   license: 'ISC',
+21 silly publish   bugs: { url: 'https://github.com/chrisjbrown/webpack-polyfill-service-plugin/issues' },
+21 silly publish   homepage: 'https://github.com/chrisjbrown/webpack-polyfill-service-plugin',
+21 silly publish   dependencies: { 'polyfill-service': '^3.3.0', 'webpack-core': '^0.6.6' },
+21 silly publish   readme: '[![Stories in Ready](https://badge.waffle.io/chrisjbrown/webpack-polyfill-service-plugin.png?label=ready&title=Ready)](https://waffle.io/chrisjbrown/webpack-polyfill-service-plugin)\n\n[![npm version](https://badge.fury.io/js/webpack-polyfill-service-plugin.svg)](https://badge.fury.io/js/webpack-polyfill-service-plugin)\n[![Dependency Status](https://gemnasium.com/chrisjbrown/webpack-polyfill-service-plugin.svg)](https://gemnasium.com/chrisjbrown/webpack-polyfill-service-plugin)\n\n\n# webpack-polyfill-service-plugin\n\nAdds polyfills via [polyfill-service](https://github.com/Financial-Times/polyfill-service) to bundle file.\n\n## Usage:\n\n - uaString: String, optional. The user agent to evaluate for polyfills that should be included conditionally (advise against as this plugin is for building a bundle that is browser agnostic)\n - unknown: String, optional. What to do when the user agent is not recognised. Set to polyfill to return polyfills\tfor all qualifying features, ignore to return nothing. Defaults to polyfill.\n\n - minify: Boolean, optional. Whether to minify the bundle\n - features: Object, optional. An object with the features that are to be considered for polyfill inclusion. If not\tsupplied, no features will be considered and the output will be blank. To load the default feature set, set features to {default:{}}. Each feature must be an entry in the features object with the key corresponding to the name of the feature and the value an object with the following properties:\n\t- flags: Array, optional. Array of flags to apply to this feature (see below)\n - Flags that may be applied to polyfills are:\n\n\t- gated: Wrap this polyfill in a feature-detect, to avoid overwriting the native implementation\n\t- always: Include this polyfill regardless of the user-agent\n\n```javascript\nvar PolyfillsPlugin = require(\'webpack-polyfill-service-plugin\');\n\nmodule.exports = {\n\n\t // ...\n\n\tplugins: [\n\t\tnew PolyfillsPlugin({\n\t\t\tminify: false,\n\t\t\tfeatures: {\n\t\t\t\t\'Array.prototype.forEach\': {flags: [\'always\', \'gated\']},\n\t\t\t\t\'Array.prototype.includes\': {flags: [\'always\', \'gated\']},\n\t\t\t\t\'Object.assign\': {flags: [\'always\', \'gated\']},\n\t\t\t\t\'Promise\': {flags: [\'always\', \'gated\']},\n\t\t\t\t\'String.prototype.includes\': {flags: [\'always\', \'gated\']}\n\t\t\t}\n\t\t}),\n\t]\n}\n```\n -\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '9b2ba539a6a501fff21ea65ee6c6bf7903c6e733',
+21 silly publish   _id: 'webpack-polyfill-service-plugin@0.0.3',
+21 silly publish   scripts: {},
+21 silly publish   _shasum: '64a5fdefc5611fd1a4478836bb30e0bc73cc4c30',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name webpack-polyfill-service-plugin
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'webpack-polyfill-service-plugin',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'webpack-polyfill-service-plugin',
+26 silly mapToRegistry   name: 'webpack-polyfill-service-plugin',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/webpack-polyfill-service-plugin
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/deBijenkorf/.npm/webpack-polyfill-service-plugin/0.0.3/package.tgz
+30 verbose request uri https://registry.npmjs.org/webpack-polyfill-service-plugin
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 5:18:37 PM
+33 verbose request using bearer token for auth
+34 verbose request id be6b1622cde8e103
+35 http request PUT https://registry.npmjs.org/webpack-polyfill-service-plugin
+36 http 403 https://registry.npmjs.org/webpack-polyfill-service-plugin
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Thu, 27 Oct 2016 15:18:38 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-lcy1131-LCY',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1477581517.448199,VS0,VE873',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /Users/deBijenkorf/.npm/registry.npmjs.org/webpack-polyfill-service-plugin on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 0.0.3." : webpack-polyfill-service-plugin
+40 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+40 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+40 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1044:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:965:12)
+41 verbose statusCode 403
+42 verbose pkgid webpack-polyfill-service-plugin
+43 verbose cwd /Users/deBijenkorf/Sites/webpack-polyfill-service-plugin
+44 error Darwin 16.0.0
+45 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+46 error node v6.2.2
+47 error npm  v3.10.7
+48 error code E403
+49 error "You cannot publish over the previously published version 0.0.3." : webpack-polyfill-service-plugin
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
