@@ -22,6 +22,11 @@ PolyfillsPlugin.prototype.apply = function(compiler) {
 				if (!chunkIsInitial) return;
 				PolyfillService.getPolyfillString(self.options).then(function(bundleString) {
 					chunk.files.forEach(function(file, i) {
+						// Fixed use together with ExtractTextPlugin issue
+						// https://github.com/chrisjbrown/webpack-polyfill-service-plugin/issues/3
+						if (!file.endsWith('.js')) {
+							return callback();
+						}
 						compilation.assets[file] = new ConcatSource("/* Polyfills */\n", bundleString, compilation.assets[file]);
 						callback();
 					});
